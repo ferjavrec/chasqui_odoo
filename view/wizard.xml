@@ -1,0 +1,42 @@
+<openerp>
+    <data>
+        
+        
+        <record id="dedy_yuristiawan_wiz" model="ir.ui.view">
+            <field name="name">chasqui.wizard</field>
+            <field name="model">chasqui.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Wizard de Sincronizacion Chasqui == Odoo">
+
+                    <field name="name" invisible="1"/>
+                    <separator string="Sincronizar Chasqui Odoo"/>
+                    
+                    <label string="Haga click en el boton Sincronizar para comenzar..." />
+                    
+                    
+                    <footer>
+                        <button name="create_request" 
+                            string="Sincronizar" type="object" 
+                            class="oe_highlight"/>
+                        <button string="Cancelar" 
+                            class="oe_link" 
+                            special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="lanzar_wizard_id" model="ir.actions.act_window">
+            <field name="name">Sincronizar Chasqui==Odoo</field>
+            <field name="res_model">chasqui.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        
+        <menuitem id="main_openacademy_menu" name="Sincronizar Chasqui" action="lanzar_wizard_id" sequence="0"/>
+        
+        
+    </data>
+</openerp>
