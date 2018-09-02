@@ -1,0 +1,28 @@
+<openerp>
+    <data>
+        
+        <!-- cambiamos los attributos de la vista res.partner -->
+        <record model="ir.ui.view" id="partner_instructor_form_view">
+            <field name="name">res.partner.form.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                
+
+                <xpath expr="//field[@name='comment']" position="attributes">
+                    <field name="comment" required="True"/>
+                    <attribute name="attrs">{'required':[('supplier','!=',False)]}</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='ref']" position="attributes">
+                    <field name="ref" required="True"/>
+                    <attribute name="attrs">{'required':[('supplier','!=',False)]}</attribute>
+                </xpath>
+
+
+
+            </field>
+        </record>
+
+    </data>
+</openerp>
