@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from openerp import models, fields, api
+import os
 
 
 class Wizard(models.TransientModel):
@@ -11,6 +12,7 @@ class Wizard(models.TransientModel):
 
     @api.multi
     def create_request(self):
-        print "You click finish"
+        #/usr/bin/python /home/fer/unqui/chasqui2odoo.py
+        os.system ("/usr/bin/python --version")
 
         return True

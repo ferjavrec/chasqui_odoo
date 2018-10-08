@@ -35,7 +35,7 @@
         </record>
 
         
-        <menuitem id="main_openacademy_menu" name="Sincronizar Chasqui" action="lanzar_wizard_id" sequence="0"/>
+        <menuitem id="main_openacademy_menu" name="Sincronizar Chasqui" action="lanzar_wizard_id" sequence="500"/>
         
         
     </data>
