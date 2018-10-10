@@ -12,7 +12,6 @@ class Wizard(models.TransientModel):
 
     @api.multi
     def create_request(self):
-        #/usr/bin/python /home/fer/unqui/chasqui2odoo.py
-        os.system ("/usr/bin/python --version")
-
+        os.system ("/usr/bin/python /home/servidor/odoo/adaptador/chasqui2odoo.py /home/servidor/odoo/adaptador/log/chasqui2odoo.log 2>&1")
+		os.system ("/usr/bin/python /home/servidor/odoo/adaptador/odoo2chasqui.py /home/servidor/odoo/adaptador/log/odoo2chasqui.log 2>&1")
         return True
